@@ -7,6 +7,6 @@ jobs:
   myjob:
     runs-on: 'ubuntu-latest'
     steps:
-      - run: "Echo hei"
+      - run: "echo hei"
 
 
