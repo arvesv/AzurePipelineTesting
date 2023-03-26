@@ -3,14 +3,16 @@ name: 'My experiment'
 on: 
   workflow_dispatch:
 
-permissions:
-      id-token: write
-      contents: read
+
 
 jobs:
   myjob:
     runs-on: 'ubuntu-latest'
-    environment: MyEnvironment
+    environment:
+      name: MyEnvironment
+    permissions:
+      id-token: write
+      contents: read
     steps:
       - name: OIDC Login to Azure Public Cloud with AzPowershell (enableAzPSSession true)
         uses: azure/login@v1
