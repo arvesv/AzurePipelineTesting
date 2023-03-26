@@ -7,6 +7,5 @@ jobs:
   myjob:
     runs-on: 'ubuntu-latest'
     steps:
-      - run: "echo hei"
-
+      - run: az account show -o table
 
